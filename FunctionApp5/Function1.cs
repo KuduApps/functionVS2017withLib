@@ -12,7 +12,7 @@ namespace FunctionApp5
     public static class Function1
     {
         [FunctionName("Function1")]
-        public static Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
+        public static Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
             var outputString = Class1.returnStr();
             log.Info(outputString);
